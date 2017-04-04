@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="imdTest1">
+    <packages>
+      <package name="com.imdb"/>
+    </packages>
+    <classes>
+      <class name="com.imdb.AppiumServer"/>
+      <class name="com.imdb.AppTest"/>
+      <class name="com.imdb.App"/>
+    </classes>
+  </test> <!-- imdTest1 -->
+  <test name="imdTest1(failed)">
+    <classes>
+      <class name="com.imdb.App">
+        <methods>
+          <include name="launch"/>
+          <include name="imdTest1"/>
+          <include name="exit"/>
+        </methods>
+      </class> <!-- com.imdb.App -->
+    </classes>
+  </test> <!-- imdTest1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
